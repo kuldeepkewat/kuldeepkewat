@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title> scripting </title>
+  </head>
+  <body>
+    enter number<input type="text" id="number">
+    <br>
+    <input type="button" value="factorial" onclick="fact()">
+    <br>
+    <script type="text/javascript">
+    function fact()
+    {
+      var fact=1;
+      var n=(document.getElementById("number").value);
+      while(n>=1)
+        {
+          fact=fact*n;
+          n--;
+        }
+        document.write("factorial"+fact);
+    }
+    </script>
+  </body>
+</html>
+
