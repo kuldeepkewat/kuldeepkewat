@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    
+    {% block content %}
+
+    <h1>this is a home page</h1>
+    <form action="dns_enumeration" method="post">
+
+        {% csrf_token %}
+
+        enter domain name : <input type="text" name="domain"><br>
+        <input type="submit">
+    </form>
+
+    {% endblock %}

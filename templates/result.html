@@ -1,0 +1,29 @@
+<!--
+{% extends 'base.html' %}
+{% block content %}
+
+Result: {{result}}
+
+{% endblock %}
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Enumeration Result</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    <h1>DNS Enumeration Result</h1>
+
+    <p>DNS records for {{ result.target_domain }} ({{ result.record_type }}):</p>
+    
+    <ul>
+        {% for rdata in result.answers %}
+            <li>{{ rdata }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
